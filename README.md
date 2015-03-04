@@ -17,9 +17,9 @@ $ sudo yum install rpmdevtools mock
 ```
 $ rpmdev-setuptree
 ```
-* Symlinks for great justice.
+* Spec for great justice.
 ```
-$ ln -s envconsul-rpm/SPECS/envconsul.spec rpmbuild/SPECS/
+$ cp ${repo}/SPECS/envconsul.spec rpmbuild/SPECS/
 ```
 * Download the release tarball.
 ```
@@ -27,10 +27,5 @@ $ spectool -g -R rpmbuild/SPECS/envconsul.spec
 ```
 * And at long last, we build.
 ```
-$ rpmbuild -ba rpbuild/SPECS/envconsul.spec
+$ rpmbuild -ba rpmbuild/SPECS/envconsul.spec
 ```
-
-# More info
-
-Largely based on @tomhillable's [consul-rpm](https://github.com/tomhillable/consul-rpm)
-repo. Thanks!
